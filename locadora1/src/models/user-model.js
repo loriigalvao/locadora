@@ -6,7 +6,7 @@ const userSchema = new db.Schema({
     type: String,
     required: true,
   },
-  data_nasc: {
+  nascimento: {
     type: Date,
     required: true,
   },
@@ -31,11 +31,11 @@ const userSchema = new db.Schema({
     required: true,
   },
   address: {
-    type: String,
+    type: Object,
     required: true,
   },
-  numero_casa: {
-    type: String,
+  numerocasa: {
+    type: Number,
     required: true,
   },
 

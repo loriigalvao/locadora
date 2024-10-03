@@ -53,10 +53,15 @@ export const signup = async (req, res) => {
   try {
     console.log(req.body)
     const user = await User.create({
+      nome: req.body.nome,
+      nascimento: req.body.nascimento,
       email: req.body.email,
       password: req.body.password,
       nome: req.body.nome,
       tipo: req.body.tipo,
+      phones: req.body.phones,
+      address: req.body.address,
+      numerocasa: req.body.numerocasa
     });
 
     const token = jwtService.generateAccessToken({

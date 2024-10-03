@@ -1,4 +1,4 @@
-const axios = require("axios")
+import axios from "axios"
 
 const cep = (req, res, next) => {
 
@@ -13,7 +13,7 @@ const cep = (req, res, next) => {
              
              delete req.body.cep
              
-             req.body.cep = resposta.data
+             req.body.address = resposta.data
 
             next()
          })
@@ -23,4 +23,4 @@ const cep = (req, res, next) => {
    }
 }
 
-module.exports = cep
+export default cep

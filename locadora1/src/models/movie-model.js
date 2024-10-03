@@ -18,7 +18,7 @@ const movieSchema = new db.Schema({
     enum: ["L", "16", "18"],
     required: true,
   }
-});
+}); 
 
 const Movie = db.model("Movie", movieSchema);
 
